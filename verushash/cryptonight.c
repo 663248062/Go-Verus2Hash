@@ -4,7 +4,7 @@
 #include <limits.h>
 #include <stdint.h>
 #include <stdio.h>  
-#include <intrin.h>  
+#include <x86intrin.h>  
 
 #include "miner.h"
 #include "sph_jh.h"
