@@ -1,0 +1,1 @@
+swig -go -cgo -intgosize 64 -c++ verushash.i
