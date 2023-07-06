@@ -1,0 +1,1 @@
+# Go-Verus2Hash
