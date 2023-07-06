@@ -61,8 +61,31 @@ if(APPLE)
    include_directories(${CMAKE_CURRENT_SOURCE_DIR}/compat)
 endif(APPLE)
 
-#set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/crypto/verus_clhash_portable.cpp PROPERTIES COMPILE_FLAGS "-m64  -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
-#set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/crypto/haraka.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+#include "lbry.h"
+#include "lyra2rev2.h"
+#include "lyra2Z.h"
+#include "phi.h"
+#include "cryptonight.h"
+#include "maxcoin.h"
+#include "tribus.h"
+#include "sph_sha2.h"
+#include "skein.h"
+#include "KeccakHash.h"
+#include "haraka_portable.h"
+
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/lbry.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/lyra2rev2.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/lyra2Z.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/phi.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/cryptonight.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/maxcoin.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/tribus.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/sph_sha2.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/skein.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/KeccakHash.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/haraka.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/haraka_portable.c PROPERTIES COMPILE_FLAGS "-m64 -mpclmul -msse2 -msse3 -mssse3 -msse4 -msse4.1 -msse4.2 -maes -g -fomit-frame-pointer")
+
 
 # Common
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
